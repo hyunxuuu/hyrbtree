@@ -26,9 +26,10 @@ Hyrbtree is a C-based implementation of Red-Black Tree. The project adopts a des
     ```
     typedef struct user_node_t{
         ...
-        int32_t elem;
-        hyrbnode_t rbnode;
+        int32_t elem;       // rbnode elem
+        hyrbnode_t rbnode;  // rbtree manage
 
+        uint32_t addr;
         user_node_t *next_node;
         ...
     }user_node_t;
@@ -67,6 +68,7 @@ Hyrbtree is a C-based implementation of Red-Black Tree. The project adopts a des
 5.  Perform operations on the Red-Black tree: add, query, replace, or delete nodes
     ```
     /**
+     *  hyrbtree_ret_t ret;
      *  hyrbtree_t *rbtree;
      *  user_node_t *new_node_ptr;
      *  user_node_t *exist_node_ptr;
@@ -78,6 +80,34 @@ Hyrbtree is a C-based implementation of Red-Black Tree. The project adopts a des
     ret = hyrbtree_get_node( rbtree,&temp_elem,(void **)&ret_node_ptr );
     ret = hyrbtree_replace_node( rbtree,del_node_ptr,del_node_ptr->next_node );
     ret = hyrbtree_del_node( rbtree,del_node_ptr );
+    ```
+6.  Implement in-order traversal for the Red-Black tree (including traversal of the singly linked list):
+    ```
+    void rbtree_preorder( hyrbtree_t *tree,hyrbnode_t *node_ptr,hy_u8_t depth ){
+        user_node_t *user_node_ptr;
+        user_node_t *cur_node_ptr;
+
+        if( node_ptr!=&tree->nil_node ){
+            rbtree_preorder( tree,node_ptr->left_node,depth+1 );
+
+            user_node_ptr = (user_node_t *)(HYRBTREE_GET_NODE_ADDR(node_ptr));
+            printf("\ndepth=%d,elem=%d",depth,user_node_ptr->elem);
+            if( HYRBTREE_READ_NODE_COLOR(node_ptr)==HYRBTREE_NODE_RED ){
+                printf(",color=R");
+            }
+            else{
+                printf(",color=B");
+            }
+            printf(",addr:%d",user_node_ptr->addr);
+            cur_node_ptr = user_node_ptr;
+            while( cur_node_ptr->next_node!=NULL ){
+                cur_node_ptr = cur_node_ptr->next_node;
+                printf("->%d",cur_node_ptr->addr);
+            }
+
+            rbtree_preorder( tree,node_ptr->right_node,depth+1 );
+        }
+    }
     ```
 
 #   Testing Instructions

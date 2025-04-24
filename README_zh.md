@@ -26,9 +26,10 @@ Hyrbtree是一个基于C的实现红黑树.该项目采用注册回调与节点�
     ```
     typedef struct user_node_t{
         ...
-        int32_t elem;
-        hyrbnode_t rbnode;
+        int32_t elem;       // rbnode elem
+        hyrbnode_t rbnode;  // rbtree manage
 
+        uint32_t addr;
         user_node_t *next_node;
         ...
     }user_node_t;
@@ -67,6 +68,7 @@ Hyrbtree是一个基于C的实现红黑树.该项目采用注册回调与节点�
 1.  对红黑树进行新增,查询,替换或删除的操作:
     ```
     /**
+     *  hyrbtree_ret_t ret;
      *  hyrbtree_t *rbtree;
      *  user_node_t *new_node_ptr;
      *  user_node_t *exist_node_ptr;
@@ -78,6 +80,34 @@ Hyrbtree是一个基于C的实现红黑树.该项目采用注册回调与节点�
     ret = hyrbtree_get_node( rbtree,&temp_elem,(void **)&ret_node_ptr );
     ret = hyrbtree_replace_node( rbtree,del_node_ptr,del_node_ptr->next_node );
     ret = hyrbtree_del_node( rbtree,del_node_ptr );
+    ```
+1.  实现对红黑树的中序遍历(包含对单向链表的遍历):
+    ```
+    void rbtree_preorder( hyrbtree_t *tree,hyrbnode_t *node_ptr,hy_u8_t depth ){
+        user_node_t *user_node_ptr;
+        user_node_t *cur_node_ptr;
+
+        if( node_ptr!=&tree->nil_node ){
+            rbtree_preorder( tree,node_ptr->left_node,depth+1 );
+
+            user_node_ptr = (user_node_t *)(HYRBTREE_GET_NODE_ADDR(node_ptr));
+            printf("\ndepth=%d,elem=%d",depth,user_node_ptr->elem);
+            if( HYRBTREE_READ_NODE_COLOR(node_ptr)==HYRBTREE_NODE_RED ){
+                printf(",color=R");
+            }
+            else{
+                printf(",color=B");
+            }
+            printf(",addr:%d",user_node_ptr->addr);
+            cur_node_ptr = user_node_ptr;
+            while( cur_node_ptr->next_node!=NULL ){
+                cur_node_ptr = cur_node_ptr->next_node;
+                printf("->%d",cur_node_ptr->addr);
+            }
+
+            rbtree_preorder( tree,node_ptr->right_node,depth+1 );
+        }
+    }
     ```
     
 #   测试说明
