@@ -1,0 +1,407 @@
+
+add node:
+Add node elem=20 success!
+Add node elem=10 success!
+Add node elem=30 success!
+Add node elem=5 success!
+Add node elem=15 success!
+Add node elem=25 success!
+Add node elem=35 success!
+Add node elem=3 success!
+Add node elem=7 success!
+Add node elem=12 success!
+Add node elem=17 success!
+Add node elem=22 success!
+Add node elem=27 success!
+Add node elem=32 success!
+Add node elem=37 success!
+Add node elem=1 success!
+
+rbtree_preorder:
+depth=4,elem=1,color=R,addr:15
+depth=3,elem=3,color=B,addr:7
+depth=2,elem=5,color=R,addr:3
+depth=3,elem=7,color=B,addr:8
+depth=1,elem=10,color=B,addr:1
+depth=3,elem=12,color=R,addr:9
+depth=2,elem=15,color=B,addr:4
+depth=3,elem=17,color=R,addr:10
+depth=0,elem=20,color=B,addr:0
+depth=3,elem=22,color=R,addr:11
+depth=2,elem=25,color=B,addr:5
+depth=3,elem=27,color=R,addr:12
+depth=1,elem=30,color=B,addr:2
+depth=3,elem=32,color=R,addr:13
+depth=2,elem=35,color=B,addr:6
+depth=3,elem=37,color=R,addr:14
+
+del node elem=15
+ret node:elem=15,addr=4
+rbtree_preorder:
+depth=4,elem=1,color=R,addr:15
+depth=3,elem=3,color=B,addr:7
+depth=2,elem=5,color=R,addr:3
+depth=3,elem=7,color=B,addr:8
+depth=1,elem=10,color=B,addr:1
+depth=3,elem=12,color=R,addr:9
+depth=2,elem=17,color=B,addr:10
+depth=0,elem=20,color=B,addr:0
+depth=3,elem=22,color=R,addr:11
+depth=2,elem=25,color=B,addr:5
+depth=3,elem=27,color=R,addr:12
+depth=1,elem=30,color=B,addr:2
+depth=3,elem=32,color=R,addr:13
+depth=2,elem=35,color=B,addr:6
+depth=3,elem=37,color=R,addr:14
+
+del node elem=5
+ret node:elem=5,addr=3
+rbtree_preorder:
+depth=3,elem=1,color=B,addr:15
+depth=2,elem=3,color=R,addr:7
+depth=3,elem=7,color=B,addr:8
+depth=1,elem=10,color=B,addr:1
+depth=3,elem=12,color=R,addr:9
+depth=2,elem=17,color=B,addr:10
+depth=0,elem=20,color=B,addr:0
+depth=3,elem=22,color=R,addr:11
+depth=2,elem=25,color=B,addr:5
+depth=3,elem=27,color=R,addr:12
+depth=1,elem=30,color=B,addr:2
+depth=3,elem=32,color=R,addr:13
+depth=2,elem=35,color=B,addr:6
+depth=3,elem=37,color=R,addr:14
+
+del node elem=25
+ret node:elem=25,addr=5
+rbtree_preorder:
+depth=3,elem=1,color=B,addr:15
+depth=2,elem=3,color=R,addr:7
+depth=3,elem=7,color=B,addr:8
+depth=1,elem=10,color=B,addr:1
+depth=3,elem=12,color=R,addr:9
+depth=2,elem=17,color=B,addr:10
+depth=0,elem=20,color=B,addr:0
+depth=3,elem=22,color=R,addr:11
+depth=2,elem=27,color=B,addr:12
+depth=1,elem=30,color=B,addr:2
+depth=3,elem=32,color=R,addr:13
+depth=2,elem=35,color=B,addr:6
+depth=3,elem=37,color=R,addr:14
+
+del node elem=20
+ret node:elem=20,addr=0
+rbtree_preorder:
+depth=3,elem=1,color=B,addr:15
+depth=2,elem=3,color=R,addr:7
+depth=3,elem=7,color=B,addr:8
+depth=1,elem=10,color=B,addr:1
+depth=3,elem=12,color=R,addr:9
+depth=2,elem=17,color=B,addr:10
+depth=0,elem=22,color=B,addr:11
+depth=2,elem=27,color=B,addr:12
+depth=1,elem=30,color=B,addr:2
+depth=3,elem=32,color=R,addr:13
+depth=2,elem=35,color=B,addr:6
+depth=3,elem=37,color=R,addr:14
+
+del node elem=30
+ret node:elem=30,addr=2
+rbtree_preorder:
+depth=3,elem=1,color=B,addr:15
+depth=2,elem=3,color=R,addr:7
+depth=3,elem=7,color=B,addr:8
+depth=1,elem=10,color=B,addr:1
+depth=3,elem=12,color=R,addr:9
+depth=2,elem=17,color=B,addr:10
+depth=0,elem=22,color=B,addr:11
+depth=2,elem=27,color=B,addr:12
+depth=1,elem=32,color=B,addr:13
+depth=2,elem=35,color=B,addr:6
+depth=3,elem=37,color=R,addr:14
+
+del node elem=10
+ret node:elem=10,addr=1
+rbtree_preorder:
+depth=3,elem=1,color=B,addr:15
+depth=2,elem=3,color=R,addr:7
+depth=3,elem=7,color=B,addr:8
+depth=1,elem=12,color=B,addr:9
+depth=2,elem=17,color=B,addr:10
+depth=0,elem=22,color=B,addr:11
+depth=2,elem=27,color=B,addr:12
+depth=1,elem=32,color=B,addr:13
+depth=2,elem=35,color=B,addr:6
+depth=3,elem=37,color=R,addr:14
+
+del node elem=35
+ret node:elem=35,addr=6
+rbtree_preorder:
+depth=3,elem=1,color=B,addr:15
+depth=2,elem=3,color=R,addr:7
+depth=3,elem=7,color=B,addr:8
+depth=1,elem=12,color=B,addr:9
+depth=2,elem=17,color=B,addr:10
+depth=0,elem=22,color=B,addr:11
+depth=2,elem=27,color=B,addr:12
+depth=1,elem=32,color=B,addr:13
+depth=2,elem=37,color=B,addr:14
+
+del node elem=3
+ret node:elem=3,addr=7
+rbtree_preorder:
+depth=3,elem=1,color=R,addr:15
+depth=2,elem=7,color=B,addr:8
+depth=1,elem=12,color=B,addr:9
+depth=2,elem=17,color=B,addr:10
+depth=0,elem=22,color=B,addr:11
+depth=2,elem=27,color=B,addr:12
+depth=1,elem=32,color=B,addr:13
+depth=2,elem=37,color=B,addr:14
+
+del node elem=17
+ret node:elem=17,addr=10
+rbtree_preorder:
+depth=2,elem=1,color=B,addr:15
+depth=1,elem=7,color=B,addr:8
+depth=2,elem=12,color=B,addr:9
+depth=0,elem=22,color=B,addr:11
+depth=2,elem=27,color=B,addr:12
+depth=1,elem=32,color=B,addr:13
+depth=2,elem=37,color=B,addr:14
+
+del node elem=22
+ret node:elem=22,addr=11
+rbtree_preorder:
+depth=2,elem=1,color=B,addr:15
+depth=1,elem=7,color=R,addr:8
+depth=2,elem=12,color=B,addr:9
+depth=0,elem=27,color=B,addr:12
+depth=1,elem=32,color=B,addr:13
+depth=2,elem=37,color=R,addr:14
+
+del node elem=27
+ret node:elem=27,addr=12
+rbtree_preorder:
+depth=2,elem=1,color=B,addr:15
+depth=1,elem=7,color=R,addr:8
+depth=2,elem=12,color=B,addr:9
+depth=0,elem=32,color=B,addr:13
+depth=1,elem=37,color=B,addr:14
+
+del node elem=32
+ret node:elem=32,addr=13
+rbtree_preorder:
+depth=1,elem=1,color=B,addr:15
+depth=0,elem=7,color=B,addr:8
+depth=2,elem=12,color=R,addr:9
+depth=1,elem=37,color=B,addr:14
+
+del node elem=37
+ret node:elem=37,addr=14
+rbtree_preorder:
+depth=1,elem=1,color=B,addr:15
+depth=0,elem=7,color=B,addr:8
+depth=1,elem=12,color=B,addr:9
+
+del node elem=7
+ret node:elem=7,addr=8
+rbtree_preorder:
+depth=1,elem=1,color=R,addr:15
+depth=0,elem=12,color=B,addr:9
+
+del node elem=12
+ret node:elem=12,addr=9
+rbtree_preorder:
+depth=0,elem=1,color=B,addr:15
+
+del node elem=1
+ret node:elem=1,addr=15
+rbtree_preorder:
+
+del node elem=19
+Tree is null!
+
+add node:
+Add node elem=10 success!
+Add node elem=5 success!
+Add node elem=15 success!
+Add node elem=16 success!
+Add node elem=3 success!
+Add node elem=7 success!
+Add node elem=12 success!
+Add node elem=20 success!
+Add node elem=16 exist!
+Add node elem=7 exist!
+Add node elem=4 success!
+Add node elem=6 success!
+Add node elem=16 exist!
+Add node elem=9 success!
+Add node elem=11 success!
+
+rbtree_preorder:
+depth=2,elem=3,color=B,addr:4
+depth=3,elem=4,color=R,addr:10
+depth=1,elem=5,color=R,addr:1
+depth=3,elem=6,color=R,addr:11
+depth=2,elem=7,color=B,addr:5->9
+depth=3,elem=9,color=R,addr:13
+depth=0,elem=10,color=B,addr:0
+depth=3,elem=11,color=R,addr:14
+depth=2,elem=12,color=B,addr:6
+depth=1,elem=15,color=R,addr:2
+depth=2,elem=16,color=B,addr:3->8->12
+depth=3,elem=20,color=R,addr:7
+
+del node elem=99
+Node not find in tree!
+
+del node elem=7
+ret node:elem=7,addr=5
+rbtree_preorder:
+depth=2,elem=3,color=B,addr:4
+depth=3,elem=4,color=R,addr:10
+depth=1,elem=5,color=R,addr:1
+depth=3,elem=6,color=R,addr:11
+depth=2,elem=7,color=B,addr:9
+depth=3,elem=9,color=R,addr:13
+depth=0,elem=10,color=B,addr:0
+depth=3,elem=11,color=R,addr:14
+depth=2,elem=12,color=B,addr:6
+depth=1,elem=15,color=R,addr:2
+depth=2,elem=16,color=B,addr:3->8->12
+depth=3,elem=20,color=R,addr:7
+
+del node elem=11
+ret node:elem=11,addr=14
+rbtree_preorder:
+depth=2,elem=3,color=B,addr:4
+depth=3,elem=4,color=R,addr:10
+depth=1,elem=5,color=R,addr:1
+depth=3,elem=6,color=R,addr:11
+depth=2,elem=7,color=B,addr:9
+depth=3,elem=9,color=R,addr:13
+depth=0,elem=10,color=B,addr:0
+depth=2,elem=12,color=B,addr:6
+depth=1,elem=15,color=R,addr:2
+depth=2,elem=16,color=B,addr:3->8->12
+depth=3,elem=20,color=R,addr:7
+
+del node elem=5
+ret node:elem=5,addr=1
+rbtree_preorder:
+depth=2,elem=3,color=B,addr:4
+depth=3,elem=4,color=R,addr:10
+depth=1,elem=6,color=R,addr:11
+depth=2,elem=7,color=B,addr:9
+depth=3,elem=9,color=R,addr:13
+depth=0,elem=10,color=B,addr:0
+depth=2,elem=12,color=B,addr:6
+depth=1,elem=15,color=R,addr:2
+depth=2,elem=16,color=B,addr:3->8->12
+depth=3,elem=20,color=R,addr:7
+
+del node elem=9
+ret node:elem=9,addr=13
+rbtree_preorder:
+depth=2,elem=3,color=B,addr:4
+depth=3,elem=4,color=R,addr:10
+depth=1,elem=6,color=R,addr:11
+depth=2,elem=7,color=B,addr:9
+depth=0,elem=10,color=B,addr:0
+depth=2,elem=12,color=B,addr:6
+depth=1,elem=15,color=R,addr:2
+depth=2,elem=16,color=B,addr:3->8->12
+depth=3,elem=20,color=R,addr:7
+
+del node elem=12
+ret node:elem=12,addr=6
+rbtree_preorder:
+depth=2,elem=3,color=B,addr:4
+depth=3,elem=4,color=R,addr:10
+depth=1,elem=6,color=R,addr:11
+depth=2,elem=7,color=B,addr:9
+depth=0,elem=10,color=B,addr:0
+depth=2,elem=15,color=B,addr:2
+depth=1,elem=16,color=R,addr:3->8->12
+depth=2,elem=20,color=B,addr:7
+
+del node elem=16
+ret node:elem=16,addr=3
+rbtree_preorder:
+depth=2,elem=3,color=B,addr:4
+depth=3,elem=4,color=R,addr:10
+depth=1,elem=6,color=R,addr:11
+depth=2,elem=7,color=B,addr:9
+depth=0,elem=10,color=B,addr:0
+depth=2,elem=15,color=B,addr:2
+depth=1,elem=16,color=R,addr:8->12
+depth=2,elem=20,color=B,addr:7
+
+del node elem=20
+ret node:elem=20,addr=7
+rbtree_preorder:
+depth=2,elem=3,color=B,addr:4
+depth=3,elem=4,color=R,addr:10
+depth=1,elem=6,color=R,addr:11
+depth=2,elem=7,color=B,addr:9
+depth=0,elem=10,color=B,addr:0
+depth=2,elem=15,color=R,addr:2
+depth=1,elem=16,color=B,addr:8->12
+
+del node elem=10
+ret node:elem=10,addr=0
+rbtree_preorder:
+depth=2,elem=3,color=B,addr:4
+depth=3,elem=4,color=R,addr:10
+depth=1,elem=6,color=R,addr:11
+depth=2,elem=7,color=B,addr:9
+depth=0,elem=15,color=B,addr:2
+depth=1,elem=16,color=B,addr:8->12
+
+del node elem=15
+ret node:elem=15,addr=2
+rbtree_preorder:
+depth=1,elem=3,color=B,addr:4
+depth=2,elem=4,color=R,addr:10
+depth=0,elem=6,color=B,addr:11
+depth=2,elem=7,color=R,addr:9
+depth=1,elem=16,color=B,addr:8->12
+
+del node elem=3
+ret node:elem=3,addr=4
+rbtree_preorder:
+depth=1,elem=4,color=B,addr:10
+depth=0,elem=6,color=B,addr:11
+depth=2,elem=7,color=R,addr:9
+depth=1,elem=16,color=B,addr:8->12
+
+del node elem=16
+ret node:elem=16,addr=8
+rbtree_preorder:
+depth=1,elem=4,color=B,addr:10
+depth=0,elem=6,color=B,addr:11
+depth=2,elem=7,color=R,addr:9
+depth=1,elem=16,color=B,addr:12
+
+del node elem=4
+ret node:elem=4,addr=10
+rbtree_preorder:
+depth=1,elem=6,color=B,addr:11
+depth=0,elem=7,color=B,addr:9
+depth=1,elem=16,color=B,addr:12
+
+del node elem=6
+ret node:elem=6,addr=11
+rbtree_preorder:
+depth=0,elem=7,color=B,addr:9
+depth=1,elem=16,color=R,addr:12
+
+del node elem=7
+ret node:elem=7,addr=9
+rbtree_preorder:
+depth=0,elem=16,color=B,addr:12
+
+del node elem=16
+ret node:elem=16,addr=12
+rbtree_preorder:
