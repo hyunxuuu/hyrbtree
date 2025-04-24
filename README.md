@@ -111,4 +111,4 @@ The Example directory contains test files (hyrbtree_test.h, hyrbtree_test). Here
 -   Minimalist API design with only 5 core functions (initialization/add/delete/query/replace).
 
 #   License
-Hyprintf follows the MIT license.
+Hyrbtree follows the MIT license.
